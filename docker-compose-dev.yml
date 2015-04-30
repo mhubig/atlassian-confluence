@@ -6,11 +6,10 @@ confluence:
     - database
   volumes:
     - home:/opt/confluence-home
-  restart: always
+  restart: no
 
 database:
   build: docker/postgres
   volumes:
     - tmp:/tmp # import backups
-    - data:/var/lib/postgresql/data
-  restart: always
+  restart: no
